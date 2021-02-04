@@ -8,7 +8,6 @@ import useStyles from './styles';
 const Posts = ({ setCurrentId }) => {
   const posts = useSelector((state) => state.posts);
   const classes = useStyles();
-  // CircularProgress is a spinner
 
   return (
     !posts.length ? <CircularProgress /> : (
@@ -24,4 +23,3 @@ const Posts = ({ setCurrentId }) => {
 };
 
 export default Posts;
-

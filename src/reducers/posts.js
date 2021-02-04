@@ -6,9 +6,6 @@ export default (posts = [], action) => {
       return action.payload;
     case LIKE:
       return posts.map((post) => (post._id === action.payload._id ? action.payload : post));
-      // map return an array
-      // action.payload -> updated post
-      // if equal action.payload.id -> there is an updated post, else just return the post like normally
     case CREATE:
       return [...posts, action.payload];
     case UPDATE:
